@@ -57,6 +57,4 @@ one greater than the number of items in the array*/
 
 return initialArray.length +1;
 
-
-
 };
