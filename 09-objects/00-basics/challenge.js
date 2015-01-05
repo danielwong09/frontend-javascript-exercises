@@ -28,6 +28,18 @@ module.exports.addProperty = function(object, newProp, newValue){
   
 };
 
-module.exports.formLetter = undefined;
+/*Complete the formLetter function. This function should:
+
+take one argument, a letter, which has three properties recipient, sender, and msg
+combine the three properties into a single string with an additional greeting and closing
+insert additional new lines between the greeting, message, and signature.
+
+*/
+
+module.exports.formLetter = function(letter){
+
+  return "Hello " + letter.recipient + ",\n\n" + letter.msg + "\n\nSincerely,\n" + letter.sender;
+
+};
 
 module.exports.canIGet = undefined;
