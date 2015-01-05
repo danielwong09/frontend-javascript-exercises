@@ -1,34 +1,32 @@
 module.exports.createCourse = function(courseTitle, courseDuration, courseStudents){
 
-var course = {
+  var course = {
 
-  title : courseTitle,
-  duration : courseDuration,
-  students : courseStudents
+    title : courseTitle,
+    duration : courseDuration,
+    students : courseStudents
 
+  };
+
+  return course;
 
 };
 
-return course;
 
+module.exports.addProperty = function(object, newProp, newValue){
+  
+  if (object.hasOwnProperty(newProp)){
+
+    return object;
+    
+  } else {
+
+    object[newProp] = newValue;
+
+    return object;
+  }
+  
 };
-
-
-/*
-Complete the createCourse function. This function should:
-
-take three arguments that will define course properties
-courseTitle (string)
-courseDuration (string)
-courseStudents (array)
-return an object that has each property assigned its proper value
-
-*/
-
-
-
-
-module.exports.addProperty = undefined;
 
 module.exports.formLetter = undefined;
 
