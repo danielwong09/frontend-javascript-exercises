@@ -1,11 +1,4 @@
 /*
-Complete the sumNumbers function. This function should:
-
-return the sum of all numbers inside of the array that is passed to the function
-if the array is empty, this function should return 0
-For example:
-
-sumNumbers([1, 2, 3]) // should return 6
 Complete the splitAndLowerCaseString function. This function should:
 
 split the inputString argument into an array of strings by commas
@@ -16,6 +9,8 @@ splitAndLowerCaseString("TEST") // returns ["test"]
 splitAndLowerCaseString("THIS,IS,SPLIT,BY,COMMAS") // returns ["this", "is", "split", "by", "commas"]
 splitAndLowerCaseString("THIS HAS NO COMMAS") // returns ["this has no commas"]
 Hint: You should use the built-in string functions split and toLowerCase.
+
+
 Complete the addIndex function. This function should:
 
 create and return a new array of all inputs as strings
@@ -36,6 +31,20 @@ module.exports.sumNumbers = function(numbers){
   return sum;
 };
 
-module.exports.splitAndLowerCaseString = undefined;
+module.exports.splitAndLowerCaseString = function(inputString){
+
+
+  var strings = [];
+
+  strings = inputString.split(",");
+
+  for(var index=0; index < strings.length; index++){
+    strings[index] = strings[index].toLowerCase();
+
+  }
+  
+  return strings;
+
+};
 
 module.exports.addIndex = undefined;
