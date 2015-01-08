@@ -22,4 +22,13 @@ module.exports.getValues = function(objectWProperties){
 
 };
 
-module.exports.objectToArray = undefined;
+module.exports.objectToArray = function(objectToArray){
+
+  strings  = [];
+
+  for (key in objectToArray){
+    strings.push(key + " is " + objectToArray[key]);
+  }
+
+  return strings;
+};
