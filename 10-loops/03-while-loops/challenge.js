@@ -9,11 +9,29 @@ module.exports.stream = function(conditionalFn, actionFn){
 };
 
 
-/*
-take two arguments, a conditionalFn and an actionFn.
-call actionFn until conditionalFn returns false.
-return nothing.
-*/
+/*This function should:
 
-module.exports.sumNumbers = undefined;
+take an array of numbers as an argument.
+return the sum of the numbers.
+this function should use a while loop.
+For example:
+
+sumNumbers([]); // should return 0.
+
+sumNumbers([1,2,3,4]); // should return 10.*/
+
+module.exports.sumNumbers = function(numbers){
+
+  var sum = 0;
+
+  var index = 0;
+
+  while (index < numbers.length){
+    sum += numbers[index];
+
+    index++;
+  }
+
+  return sum;
+};
 
