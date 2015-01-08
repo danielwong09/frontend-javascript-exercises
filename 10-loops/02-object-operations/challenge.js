@@ -1,5 +1,26 @@
-module.exports.copy = undefined;
+module.exports.copy = function(objectToCopy){
 
-module.exports.extend = undefined;
+  var duplicate = new Object();
+
+  for (key in objectToCopy){
+
+    duplicate[key] = objectToCopy[key];
+
+  }
+
+  return duplicate;
+
+};
+
+module.exports.extend = function(dest, src){
+
+  for (srcKey in src){
+    dest[srcKey] = src[srcKey]
+
+  }
+
+  return dest;
+
+};
 
 module.exports.hasElems = undefined;
